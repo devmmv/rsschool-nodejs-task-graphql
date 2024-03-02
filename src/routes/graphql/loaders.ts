@@ -76,7 +76,7 @@ const userSubscribedToLoader = (prisma: PrismaClient) => {
   });
 };
 
-export const loaders = (prisma: PrismaClient) => ({
+export const handleLoader = (prisma: PrismaClient) => ({
   memberTypeLoader: memberTypeLoader(prisma),
   postLoader: postLoader(prisma),
   profileLoader: profileLoader(prisma),
