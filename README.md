@@ -1,3 +1,43 @@
+## How to test
+1. Clone repository
+```
+git clone https://github.com/devmmv/rsschool-nodejs-task-graphql.git
+```
+or SSH
+```
+git clone git@github.com:devmmv/rsschool-nodejs-task-graphql.git
+```
+2. Change directory:
+```
+cd rsschool-nodejs-task-graphql
+```
+3. Install dependencies:
+ ```
+npm ci
+```
+4. Create .env file (based on .env.example):
+```
+mv ./.env.example ./.env
+```
+5. Create db file:
+ ```
+touch ./prisma/database.db
+```
+6. Apply pending migrations: 
+```
+npx prisma migrate deploy
+```
+7. Seed db: 
+```
+npx prisma db seed
+```
+8. Start testing: 
+``` 
+npm run test-integrity && npm run test-rule && npm run test-loader && npm run test-loader-prime && npm run test-queries && npm run test-mutations
+```
+
+
+
 ## Assignment: Graphql
 ### Tasks:
 1. Add logic to the graphql endpoint: ./src/routes/graphql.  
